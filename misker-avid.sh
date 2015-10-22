@@ -40,7 +40,7 @@ declare ALL_TIME
 ####               Basic verifications                       ####
 #################################################################
 
-# Chenge to folder where media files are stored
+# Change to folder where media files are stored
 cd "$IN_FOLDER"
 
 # Checking if action succeeded
@@ -313,7 +313,7 @@ if [ "$PROCESSING" == true ]; then
 	
 else
 	echo
-	echo "Just readind input folder and sorting files."
+	echo "Just reading input folder and sorting files."
 	echo
 fi
 

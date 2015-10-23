@@ -150,7 +150,7 @@ function transform_files {
 				# Deinterlacing and forcing aspect because ffmpeg cant read AVID stream aspect
 				# Caution: change acording particular source and need: https://ffmpeg.org/ffmpeg.html
 				tmp_ffmpeg+=("-vf yadif=0:-1:0,setdar=dar=16/9")
-				tmp_ffmpeg+=("-c:v libx264 -pix_fmt yuv420p -preset ultrafast -crf 20")
+				tmp_ffmpeg+=("-c:v libx264 -pix_fmt yuv420p -preset medium -crf 20")
 				tmp_ffmpeg+=("-c:a aac -strict experimental -b:a 128k -ar 48000 -y" "${out_file}")
 			fi
 			
@@ -288,7 +288,7 @@ else
 	tput setaf 1
 	echo
 	echo "There are ${num_files}to mux,"
-	echo "and you cann\47t divide them with $NUM_STREAMS."
+	echo "and you can't divide them with $NUM_STREAMS."
 	tput sgr0
 	echo
 	exit 1
